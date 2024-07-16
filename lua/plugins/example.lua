@@ -30,9 +30,14 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     event = "User LazyDir",
     cmd = "Neotree",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
     keys = {
       { "<Leader>b", "<Cmd>Neotree<CR>", desc = "Flie Explorer" },
-      { "<Leader>gb", "<Cmd>Neotree git_status<CR>", desc = "Git Explorer" },
+      { "<Leader>g", "<Cmd>Neotree git_status<CR>", desc = "Git Explorer" },
     },
     opts = {
       sources = {
@@ -54,17 +59,6 @@ return {
       default_component_configs = {
         indent = {
           with_expanders = true,
-        },
-        -- modified = {
-        --   symbol = icons.file.modified,
-        -- },
-        git_status = {
-          symbols = {
-            added = "+",
-            deleted = "-",
-            modified = "*",
-            renamed = "r",
-          },
         },
       },
       window = {
