@@ -19,13 +19,13 @@ return {
   }
   },
   { "catppuccin/nvim", lazy = false,  name = "catppuccin", priority = 1000 },
+  { "github/copilot.vim", },
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
     },
   },
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     event = "User LazyDir",
